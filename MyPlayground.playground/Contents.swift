@@ -334,4 +334,5 @@ for i in 0...valueI.count - 1{
         print("値はnilです。")
     }
     
+    
 }
