@@ -28,7 +28,18 @@ print (valueA - valueB )
 print (valueA * valueB)
 print (valueA / valueB )
 
+
 //課題1-3 if文
+//Int型の変数valueCを定義し、代入された値に応じてif文で値を判別し、以下の仕様の通り出力してください。（マイナスの値は考慮しなくてもよい）
+//1~3桁の場合は「xxはz桁の値です。」（xは数値, zは桁数）
+//4桁以上の場合は「xxは4桁以上の値です。」
+//代入値の例: 4, 12, 100, 1999, 44444
+//// 出力結果（代入された値に応じて）
+//"4は1桁の値です。"
+//"12は2桁の値です。"
+//"100は3桁の値です。"
+//"1999は4桁以上の値です。"
+//
 
 // valueCに格納
 var valueC: Int = 115
@@ -93,7 +104,9 @@ calculationB(valueA: 100, valueB: 30)
 //// 出力結果
 //計算結果65は奇数です。
 
+                       //第一引数、第二引数      //戻り値のデータ型
 func calculationC(valueA: Int, valueB: Int) -> Int{
+    //第一引数、第二引数を足した数が戻り値になる。
     return valueA + valueB
 }
 var valueD: Int = calculationC(valueA: 40, valueB: 25)
@@ -110,12 +123,19 @@ if valueD % 2 == 0 {
 //クラスAインスタンスです。
 
 class HogeA {
+        //() -> 引数なし
+        //データ型にいろんなクラスを入れられる
     func put() {
         print ("クラスAインスタンスです")
     }
 }
+//classのインスタンス化　インスタンス化したら関数を呼ぶ
+//インスタンス化の() と　関数を呼ぶ（）は違う
+
 let insA: HogeA = HogeA()
-insA.put
+
+insA.put()
+
 
 //classHogeBを作成します。
 //classHogeBにprint文で「私の名前はxxxです。」と表示するString型の引数nameを持つ関数putNameを作成します。定数takashiとkenを宣言し、それぞれHogeBのインスタンス化をおこないます。takashiにはnameの引数に「たかし」、Kenには「ケン」を渡して表示してください。
@@ -130,6 +150,7 @@ class HogeB {
 }
 
 let takashi = HogeB()
+
 let ken  = HogeB()
 
 takashi.putName(name:"たかし")
@@ -140,6 +161,7 @@ ken.putName(name:"ケン")
 //// 出力結果
 //私の名前はやまだです。
 //私の名前はみやたです。
+
 class HogeC {
     var name : String
     init(name : String) {
@@ -169,7 +191,9 @@ miyata.putNam()
 //名前
 
 
+
 //列挙体userを定義をします
+//
 enum User: String {
     case name = "名前"
     case age  = "年齢"
@@ -182,7 +206,7 @@ let user: User = User.name
 // switch どれを出力するか見分ける
 switch user {
 case .name:
-    print(User.name.rawValue)
+    print(user.rawValue)
 case .age:
     print(User.age.rawValue)
 case .bloodType:
@@ -208,11 +232,13 @@ for i in 1...50 {
 //// 出力結果
 //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
 
+// 変数valueE（配列を配列を定義）
 var valueE: [Int] = []
-
+// appendで配列を数える
 for i in 1...50 {
     valueE.append(i)
 }
+//出力
 print (valueE)
 
 //課題1-14 配列（削除）
@@ -227,6 +253,7 @@ print (valueE)
 var valueF:[String] = ["リュウ", "ケン", "ナッシュ", "ガイル", "ベガ", "フェイロン"]
 // removでナッシュを除去
 valueF.remove(at: 2)
+//出力
 print (valueF)
 
 //課題1-15 配列（ソート）
@@ -326,6 +353,7 @@ if let valueSum = valueH["k"] {
 var valueI: [Any?] = [1, "こんにちわ" , "こんばんわ", nil, 3, 100, "よろしく", nil, "お願いします。"]
 
 for i in 0...valueI.count - 1{
+        //as ?  asに変換できたらという意味
     if let string = valueI[i] as? String{
         print (string)
     } else if let num = valueI[i] as? Int {
@@ -333,6 +361,10 @@ for i in 0...valueI.count - 1{
     } else {
         print("値はnilです。")
     }
+    
+    //もしnilになったら、中の処理をする。
+    //guard文
+    
     
     
 }
