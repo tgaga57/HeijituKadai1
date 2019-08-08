@@ -5,16 +5,16 @@ import UIKit
 
 // itemA.itemB,itemC,itemDに格納
 let itemA: Int = 1000
-print (itemA)
+
 
 let itemB: String = "こんにちは"
-print (itemB)
+
 
 let itemC: Double = 42.195
-print (itemC)
 
 let itemD: Bool = true
-print (itemD)
+
+
 
 //課題1-2 四則演算
 
@@ -27,6 +27,8 @@ print (valueA + valueB )
 print (valueA - valueB )
 print (valueA * valueB)
 print (valueA / valueB )
+
+
 
 
 //課題1-3 if文
@@ -56,6 +58,9 @@ if valueC >= 1 && valueC < 10 {
     print ("\(valueC)は４桁以上です")
 }
 
+
+
+
 //課題1-4 switch文
 
 
@@ -71,6 +76,9 @@ default:
     print ("\(valueC)は４桁以上です")
 }
 
+
+
+
 //課題1-5 関数単一の引数
 //Int型の引数valueを持つ関数calculationAを作成。
 //valueに10を渡し、10倍された値を出力してください。
@@ -83,6 +91,9 @@ func calculationA(value: Int) {
 }
 calculationA(value: 10)
 
+
+
+
 //課題1-6 関数複数の引数
 //Int型の引数valueA,valueBを持つ関数calculationBを作成。
 //valueAに100,valueBに30を渡し、割り算したあまりを出力してください。
@@ -94,6 +105,9 @@ func calculationB(valueA: Int,valueB: Int) {
 }
 
 calculationB(valueA: 100, valueB: 30)
+
+
+
 
 //課題1-7 関数の戻り値
 //Int型の引数valueA,valueBとInt型の戻り値を返す関数calculationCを作成。 valueAに40,valueBに25を渡し足し算した値を戻り値で返します。
@@ -117,6 +131,9 @@ if valueD % 2 == 0 {
     print ("計算結果\(valueD)は奇数です.")
 }
 
+
+
+
 //課題1-8 クラスのインスタンス
 //classHogeAを作成します。 classHogeAにprint文で「クラスAインスタンスです」と表示する関数putを作成します。インスンタンス化を行い、関数putを呼び出してください。宣言する定数名はinsAとします。
 //// 出力結果
@@ -136,7 +153,7 @@ let insA: HogeA = HogeA()
 
 insA.put()
 
-
+//課題１−９
 //classHogeBを作成します。
 //classHogeBにprint文で「私の名前はxxxです。」と表示するString型の引数nameを持つ関数putNameを作成します。定数takashiとkenを宣言し、それぞれHogeBのインスタンス化をおこないます。takashiにはnameの引数に「たかし」、Kenには「ケン」を渡して表示してください。
 //// 出力結果
@@ -155,6 +172,9 @@ let ken  = HogeB()
 
 takashi.putName(name:"たかし")
 ken.putName(name:"ケン")
+
+
+
 
 //課題1-10 イニシャライザ
 //課題1-9の関数の引数をclassのイニシャライザに定義し、関数の引数を使わずに同様の出力になるようにしてください。 class名はHogeCとし、定数はそれぞれyamada出力は「やまだ」,miyata出力は「みやた」としてください。
@@ -213,6 +233,8 @@ case .bloodType:
     print(User.bloodType.rawValue)
 }
 
+
+//課題１−１２
 //for文を用いて1〜50までの数値を出力してください。
 //// 出力結果
 //1
@@ -226,6 +248,7 @@ case .bloodType:
 for i in 1...50 {
     print(i)
 }
+
 
 //課題1-13 配列（追加）
 //Int型配列変数valueEを定義し、for文を用いて1〜50の値を代入してください。代入後、valueEの内容をprint文で出力してください。
@@ -241,6 +264,9 @@ for i in 1...50 {
 //出力
 print (valueE)
 
+
+
+
 //課題1-14 配列（削除）
 //以下の内容を持つString型配列変数valueFを定義し、ナッシュを配列から削除した結果を出力してください。
 //["リュウ", "ケン", "ナッシュ", "ガイル", "ベガ", "フェイロン"]
@@ -255,6 +281,8 @@ var valueF:[String] = ["リュウ", "ケン", "ナッシュ", "ガイル", "ベ�
 valueF.remove(at: 2)
 //出力
 print (valueF)
+
+
 
 //課題1-15 配列（ソート）
 //以下の内容を持つInt型配列定数valueGを定義し、昇順と降順にソートした内容をそれぞれ出力してください。
@@ -275,6 +303,9 @@ print (valueG)
 valueG.sort {$0 > $1}
 print (valueG)
 
+
+
+
 //課題1-16 配列（要素数）
 //課題1-15で定義したvalueGの配列の数を出力してください。
 //// 出力結果
@@ -282,6 +313,8 @@ print (valueG)
 
 //valueGをカウント
 print (valueG.count)
+
+
 
 //課題1-17 辞書型
 //以下の内容を持つ辞書型の定数valueHを宣言し、bの値を出力してください。 （※警告は無視しても構わない）
@@ -304,6 +337,7 @@ print (valueH["b"])
 
 
 
+
 //課題1-18 Optional
 //課題1-17で定義したvalueHのbの値をOptional Bindingを用いて出力してください。
 //// 出力結果
@@ -319,6 +353,9 @@ if let valueNumebr = valueH["b"] {
     // 出力
     print (valueNumebr)
 }
+
+
+
 //課題1-19 nil
 //課題1-17で定義したvalueHのkの値をOptional Bindingを用いて判断し、nilパターンの場合は「値はnilです。」と出力してください。
 //// 出力結果
@@ -329,6 +366,8 @@ if let valueSum = valueH["k"] {
 } else {
     print ("値はnilです")
 }
+
+
 
 
 //課題1-20 総復習
