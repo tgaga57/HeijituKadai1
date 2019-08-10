@@ -118,7 +118,7 @@ calculationB(valueA: 100, valueB: 30)
 //// 出力結果
 //計算結果65は奇数です。
 
-                       //第一引数、第二引数      //戻り値のデータ型
+//第一引数、第二引数      //戻り値のデータ型
 func calculationC(valueA: Int, valueB: Int) -> Int{
     //第一引数、第二引数を足した数が戻り値になる。
     return valueA + valueB
@@ -140,8 +140,8 @@ if valueD % 2 == 0 {
 //クラスAインスタンスです。
 
 class HogeA {
-        //() -> 引数なし
-        //データ型にいろんなクラスを入れられる
+    //() -> 引数なし
+    //データ型にいろんなクラスを入れられる
     func put() {
         print ("クラスAインスタンスです")
     }
@@ -392,7 +392,7 @@ if let valueSum = valueH["k"] {
 var valueI: [Any?] = [1, "こんにちわ" , "こんばんわ", nil, 3, 100, "よろしく", nil, "お願いします。"]
 
 for i in 0...valueI.count - 1{
-        //as ?  asに変換できたらという意味
+    //as ?  asに変換できたらという意味
     if let string = valueI[i] as? String{
         print (string)
     } else if let num = valueI[i] as? Int {
@@ -402,7 +402,7 @@ for i in 0...valueI.count - 1{
     }
     
     //もしnilになったら、中の処理をする。
-    //guard文
+    
     
     
     
